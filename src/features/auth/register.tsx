@@ -26,7 +26,7 @@ export function Register() {
   }
 
   return (
-    <Box padding={5} maxW="600px" mx="auto" mt={'16'}>
+    <Box padding={5} maxW="600px" mx="auto" mt={'2'}>
       <Heading mb="10" textAlign="center" fontSize={'x-large'}>
         Formulario de Registro
       </Heading>
