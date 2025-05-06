@@ -1,11 +1,7 @@
-import { Box } from '@chakra-ui/react'
+import { Register } from './features/auth/register'
 
-function App() {
-  return (
-    <>
-      <Box>Hello world</Box>
-    </>
-  )
+const App = () => {
+  return <Register />
 }
 
 export default App
