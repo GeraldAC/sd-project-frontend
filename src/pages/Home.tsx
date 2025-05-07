@@ -1,9 +1,25 @@
-import { Box, Heading } from '@chakra-ui/react'
+import { Box, Flex, Stack } from '@chakra-ui/react'
+import { MiddleSection } from './middle-section'
+import { SidebarProvider } from './sidebar-context'
+import { TopSection } from './top-section'
+import { Sidebar } from './sidebar'
+import { BottomSection } from './botton-section'
 
-const Home = () => (
-  <Box p={6}>
-    <Heading>Bienvenido a EmprendeLocal</Heading>
-  </Box>
-)
+function App() {
+  return (
+    <SidebarProvider>
+      <Flex minH="100dvh">
+        <Sidebar />
+        <Box flex="1">
+          <Stack h="full">
+            <TopSection />
+            <MiddleSection />
+            <BottomSection />
+          </Stack>
+        </Box>
+      </Flex>
+    </SidebarProvider>
+  )
+}
 
-export default Home
+export default App
