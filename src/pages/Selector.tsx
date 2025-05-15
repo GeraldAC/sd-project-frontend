@@ -6,10 +6,11 @@ const pages = createListCollection({
     { label: 'Inicio', value: '/home' },
     { label: 'Login', value: '/login' },
     { label: 'Registro', value: '/register' },
+    { label: 'Dashboard', value: '/dashboard' },
   ],
 })
 
-export const PageSelector = () => {
+const Selector = () => {
   const navigate = useNavigate()
 
   return (
@@ -62,3 +63,5 @@ export const PageSelector = () => {
     </Card.Root>
   )
 }
+
+export default Selector

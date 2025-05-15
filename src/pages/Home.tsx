@@ -1,25 +1,5 @@
-import { Box, Flex, Stack } from '@chakra-ui/react'
-import { MiddleSection } from './middle-section'
-import { SidebarProvider } from './sidebar-context'
-import { TopSection } from './top-section'
-import { Sidebar } from './sidebar'
-import { BottomSection } from './botton-section'
-
-function App() {
-  return (
-    <SidebarProvider>
-      <Flex minH="100dvh">
-        <Sidebar />
-        <Box flex="1">
-          <Stack h="full">
-            <TopSection />
-            <MiddleSection />
-            <BottomSection />
-          </Stack>
-        </Box>
-      </Flex>
-    </SidebarProvider>
-  )
+const Home = () => {
+  return <div>Home</div>
 }
 
-export default App
+export default Home

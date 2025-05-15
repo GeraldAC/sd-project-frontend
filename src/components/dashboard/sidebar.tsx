@@ -11,7 +11,6 @@ import {
   Text,
 } from '@chakra-ui/react'
 
-import { useSidebarContext } from './sidebar-context'
 import { Tooltip } from '@/components/ui/tooltip'
 import {
   LuArrowBigLeft,
@@ -21,6 +20,7 @@ import {
   LuNewspaper,
   LuPlug,
 } from 'react-icons/lu'
+import { useSidebarContext } from './sidebar-context'
 
 export function Sidebar() {
   const { sideBarVisible, toggleSidebar } = useSidebarContext()

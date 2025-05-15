@@ -26,7 +26,7 @@ import {
   LuPartyPopper,
   LuSearch,
 } from 'react-icons/lu'
-import cafe from '../assets/cafe-peru.jpg'
+import cafe from '../../assets/cafe-peru.jpg'
 
 interface PromptButtonProps {
   icon?: React.ReactElement

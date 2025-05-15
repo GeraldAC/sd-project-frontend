@@ -18,7 +18,7 @@ const steps = [
   },
 ]
 
-export function Register() {
+const RegisterForm = () => {
   const [step, setStep] = useState(0)
 
   const goToNextStep = () => {
@@ -80,3 +80,5 @@ export function Register() {
     </Box>
   )
 }
+
+export default RegisterForm

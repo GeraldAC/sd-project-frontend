@@ -1,9 +1,9 @@
 import { Flex, IconButton } from '@chakra-ui/react'
-import { Menu } from './menu'
-import { useSidebarContext } from './sidebar-context'
 import { Tooltip } from '@/components/ui/tooltip'
 import { LuBadgeAlert, LuArrowBigRightDash } from 'react-icons/lu'
 import { Avatar } from '@/components/ui/avatar'
+import { useSidebarContext } from './sidebar-context'
+import { Menu } from './menu'
 
 export function TopSection() {
   const { sideBarVisible, toggleSidebar } = useSidebarContext()

@@ -20,6 +20,7 @@ export const SidebarProvider = (props: { children: React.ReactNode }) => {
   )
 }
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const useSidebarContext = () => {
   return useContext(SidebarContext)
 }
