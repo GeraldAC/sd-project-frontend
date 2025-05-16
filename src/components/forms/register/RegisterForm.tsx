@@ -26,7 +26,7 @@ const RegisterForm = () => {
   }
 
   return (
-    <Box padding={5} maxW="600px" mx="auto" mt={'2'}>
+    <Box padding={5} maxW="600px" mx="auto" mt={'0'}>
       <Heading mb="10" textAlign="center" fontSize={'x-large'}>
         Formulario de Registro
       </Heading>
