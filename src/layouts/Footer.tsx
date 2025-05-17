@@ -3,14 +3,14 @@ import { LuZap } from 'react-icons/lu'
 
 const Footer = () => {
   return (
-    <Box py={4} bg={'brown.50'} textAlign="center">
+    <Box py={4} bg={'brand.200'} textAlign="center">
       <Text fontSize="sm">
         &copy; {new Date().getFullYear()} CuscoOrgánico. Todos los derechos
         reservados.
       </Text>
       <Text fontSize="sm">
         Hecho con
-        <Icon boxSize={4} color={'tomato'} mx="2">
+        <Icon boxSize={4} color={'red'} mx="2">
           <LuZap />
         </Icon>
         por EmprendeBro

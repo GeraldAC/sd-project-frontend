@@ -9,7 +9,7 @@ const Login = () => {
         padding={5}
         maxW="450px"
         mx="auto"
-        mt={'14'}
+        mt={'12'}
         colorPalette={'orange'}
         size={'lg'}
         variant={'elevated'}

@@ -43,7 +43,7 @@ const LoginForm = () => {
           <Field.Label>Correo electrónico</Field.Label>
           <InputGroup
             startElement={
-              <Icon size="md" color={'tomato'}>
+              <Icon size="md" color={'brand.500'}>
                 <LuUser />
               </Icon>
             }
@@ -58,7 +58,7 @@ const LoginForm = () => {
           <Field.Label>Contraseña</Field.Label>
           <InputGroup
             startElement={
-              <Icon size="md" color={'tomato'}>
+              <Icon size="md" color={'brand.500'}>
                 <LuLock />
               </Icon>
             }

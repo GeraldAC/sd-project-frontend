@@ -14,7 +14,7 @@ const UserMenu = () => {
   return (
     <Menu.Root>
       <Menu.Trigger>
-        <Avatar.Root size={'xl'} variant={'subtle'} colorPalette={'brown'}>
+        <Avatar.Root size={'xl'} variant={'subtle'} colorPalette={'brand'}>
           <Avatar.Fallback name={user?.name} />
         </Avatar.Root>
       </Menu.Trigger>

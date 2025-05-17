@@ -1,91 +1,38 @@
 import { createSystem, defaultConfig, defineConfig } from '@chakra-ui/react'
 
-const config = defineConfig({
+const customConfig = defineConfig({
   theme: {
     tokens: {
       colors: {
-        green: {
-          50: { value: '#E8F5E9' },
-          100: { value: '#C8E6C9' },
-          200: { value: '#A5D6A7' },
-          300: { value: '#81C784' },
-          400: { value: '#66BB6A' },
-          500: { value: '#4CAF50' },
-          600: { value: '#43A047' },
-          700: { value: '#388E3C' },
-          800: { value: '#2E7D32' },
-          900: { value: '#1B5E20' },
-        },
-        brown: {
-          50: { value: '#f3e5d8' },
-          100: { value: '#e3c8aa' },
-          200: { value: '#d3ab7b' },
-          300: { value: '#c38e4c' },
-          400: { value: '#b3711d' },
-          500: { value: '#8B4513' },
-          600: { value: '#6f3610' },
-          700: { value: '#52280c' },
-          800: { value: '#361907' },
-          900: { value: '#1b0b03' },
-        },
-        tomato: {
-          500: { value: '#FF6347' },
-        },
-        orange: {
-          500: { value: '#FF9800' },
-        },
-        yellow: {
-          500: { value: '#FFEB3B' },
-        },
-        olive: {
-          500: { value: '#6B8E23' },
+        brand: {
+          50: { value: '#fef9f6' },
+          100: { value: '#f3e9e1' },
+          200: { value: '#e0cfc2' },
+          300: { value: '#cca68e' },
+          400: { value: '#b68560' },
+          500: { value: '#9e6238' },
+          600: { value: '#804c2c' },
+          700: { value: '#63391f' },
+          800: { value: '#4b2c18' },
+          900: { value: '#2e1a0e' },
+          950: { value: '#1a0f08' },
         },
       },
     },
-
     semanticTokens: {
       colors: {
-        primary: {
-          solid: { value: '{colors.green.500}' },
-          hover: { value: '{colors.green.600}' },
-          contrast: { value: '{colors.green.50}' },
-          fg: { value: '{colors.green.900}' },
-          muted: { value: '{colors.green.100}' },
-          subtle: { value: '{colors.green.200}' },
-          emphasized: { value: '{colors.green.300}' },
-          focusRing: { value: '{colors.green.500}' },
-        },
-        background: {
-          default: { value: '{colors.brown.50}' },
-          subtle: { value: '{colors.brown.100}' },
-        },
-        surface: {
-          default: { value: '{colors.brown.100}' },
-          strong: { value: '{colors.brown.300}' },
-        },
-        text: {
-          default: { value: '{colors.brown.900}' },
-          muted: { value: '{colors.brown.700}' },
-        },
-        accent: {
-          solid: { value: '{colors.orange.500}' },
-          contrast: { value: '{colors.orange.50}' },
-        },
-        danger: {
-          solid: { value: '{colors.tomato.500}' },
-        },
-        warning: {
-          solid: { value: '{colors.yellow.500}' },
-        },
-        success: {
-          solid: { value: '{colors.green.400}' },
-        },
-        secondary: {
-          solid: { value: '{colors.olive.500}' },
+        brand: {
+          solid: { value: '{colors.brand.500}' },
+          contrast: { value: '{colors.brand.100}' },
+          fg: { value: '{colors.brand.700}' },
+          muted: { value: '{colors.brand.200}' },
+          subtle: { value: '{colors.brand.300}' },
+          emphasized: { value: '{colors.brand.400}' },
+          focusRing: { value: '{colors.brand.500}' },
         },
       },
     },
   },
 })
 
-export const system = createSystem(defaultConfig, config)
+export const system = createSystem(defaultConfig, customConfig)

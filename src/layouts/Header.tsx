@@ -12,7 +12,7 @@ import {
 } from '@chakra-ui/react'
 import { useLocation } from 'react-router-dom'
 import logo from '../assets/logo.jpg'
-import UserMenu from '@/components/layout/UserMenu'
+import UserMenu from '@/components/common/UserMenu'
 
 const Header = () => {
   const { user, login } = useAuth()
@@ -23,7 +23,14 @@ const Header = () => {
   }
 
   return (
-    <Box bg={'brown.700'} px={12} py={3}>
+    <Box
+      position={'sticky'}
+      top={'0'}
+      zIndex={'sticky'}
+      bg={'brand.800'}
+      px={12}
+      py={3}
+    >
       <Flex align="center" gap={'2'}>
         <LinkBox>
           <LinkOverlay href="/">
@@ -71,12 +78,10 @@ const Header = () => {
                 asChild
                 rounded={'full'}
                 size={'lg'}
-                colorPalette={'green'}
+                colorPalette={'orange'}
                 variant={'surface'}
               >
-                <Link href="/login" color={'green.900'}>
-                  Iniciar Sesión
-                </Link>
+                <Link href="/login">Iniciar Sesión</Link>
               </Button>
             )}
             {location.pathname !== '/register' && (
