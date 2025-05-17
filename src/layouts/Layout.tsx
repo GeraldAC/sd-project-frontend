@@ -1,5 +1,5 @@
 import { ReactNode } from 'react'
-import { Box, Container, Separator } from '@chakra-ui/react'
+import { Box, Container } from '@chakra-ui/react'
 import Header from './Header'
 import Footer from './Footer'
 
@@ -9,13 +9,11 @@ interface LayoutProps {
 
 const Layout = ({ children }: LayoutProps) => {
   return (
-    <Box minH="100vh" display="flex" flexDirection="column">
+    <Box minH="100dvh" display="flex" flexDirection="column">
       <Header />
-      <Separator size="md" variant={'solid'} colorPalette={'teal'} />
-      <Container flex="1" maxW="container.md" mt={'8'}>
+      <Container flex="1" maxW="container.md" mt={'5'}>
         {children}
       </Container>
-      <Separator size="md" variant={'solid'} colorPalette={'teal'} />
       <Footer />
     </Box>
   )

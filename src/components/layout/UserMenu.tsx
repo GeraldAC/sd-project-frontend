@@ -8,18 +8,18 @@ const UserMenu = () => {
 
   const handleLogout = () => {
     logout()
-    navigate('/home')
+    navigate('/')
   }
 
   return (
     <Menu.Root>
       <Menu.Trigger>
-        <Avatar.Root size={'xl'} variant={'subtle'} colorPalette={'teal'}>
+        <Avatar.Root size={'xl'} variant={'subtle'} colorPalette={'brown'}>
           <Avatar.Fallback name={user?.name} />
         </Avatar.Root>
       </Menu.Trigger>
       <Menu.Positioner>
-        <Menu.Content bgColor={'gray.800'}>
+        <Menu.Content>
           <VStack alignItems={'initial'} p={'1'}>
             <Box
               _hover={{ textDecor: 'none', layerStyle: 'fill.subtle' }}

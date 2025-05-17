@@ -3,7 +3,7 @@ import { LuZap } from 'react-icons/lu'
 
 const Footer = () => {
   return (
-    <Box py={4} bg="black" textAlign="center">
+    <Box py={4} bg="white" textAlign="center">
       <Text fontSize="sm">
         &copy; {new Date().getFullYear()} CuscoOrgánico. Todos los derechos
         reservados.

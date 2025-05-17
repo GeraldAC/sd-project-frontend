@@ -4,13 +4,11 @@ import { AuthProvider } from './hooks/AuthContext'
 
 const App = () => {
   return (
-    <>
-      <Router>
-        <AuthProvider>
-          <AppRoutes />
-        </AuthProvider>
-      </Router>
-    </>
+    <Router>
+      <AuthProvider>
+        <AppRoutes />
+      </AuthProvider>
+    </Router>
   )
 }
 

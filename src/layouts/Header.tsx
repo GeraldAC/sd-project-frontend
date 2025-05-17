@@ -23,10 +23,10 @@ const Header = () => {
   }
 
   return (
-    <Box bg="black" px={12} py={3}>
+    <Box bg="white" px={12} py={3}>
       <Flex align="center" gap={'2'}>
         <LinkBox>
-          <LinkOverlay href="/home">
+          <LinkOverlay href="/">
             <Image src={logo} alt="Logo" rounded={'full'} height="50px" />
           </LinkOverlay>
         </LinkBox>
@@ -35,10 +35,10 @@ const Header = () => {
           <UserMenu />
         ) : (
           <>
-            {location.pathname == '/home' && (
+            {location.pathname == '/' && (
               <ButtonGroup gap={'2'}>
                 <Button
-                  colorPalette={'teal'}
+                  colorPalette={'gray'}
                   variant={'ghost'}
                   rounded={'full'}
                   size={'lg'}
@@ -46,7 +46,7 @@ const Header = () => {
                   Sobre Nosotros
                 </Button>
                 <Button
-                  colorPalette={'teal'}
+                  colorPalette={'gray'}
                   variant={'ghost'}
                   rounded={'full'}
                   size={'lg'}
@@ -59,12 +59,12 @@ const Header = () => {
             {location.pathname !== '/login' && (
               <Button
                 asChild
-                colorPalette={'black'}
+                colorPalette={'white'}
                 variant={'outline'}
                 rounded={'full'}
                 size={'lg'}
                 borderWidth={'medium'}
-                borderColor={'white'}
+                borderColor={'black'}
               >
                 <Link href="/login">Iniciar Sesión</Link>
               </Button>
