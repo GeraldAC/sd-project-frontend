@@ -19,7 +19,7 @@ const CardHorizontal = () => {
           </HStack>
         </Card.Body>
         <Card.Footer>
-          <Button>Comprar cafe</Button>
+          <Button colorPalette={'orange'}>Comprar cafe</Button>
         </Card.Footer>
       </Box>
     </Card.Root>

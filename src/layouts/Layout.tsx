@@ -11,7 +11,7 @@ const Layout = ({ children }: LayoutProps) => {
   return (
     <Box minH="100dvh" display="flex" flexDirection="column">
       <Header />
-      <Container flex="1" maxW="container.md" mt={'5'}>
+      <Container flex="1" maxW="container.md" my={'5'}>
         {children}
       </Container>
       <Footer />

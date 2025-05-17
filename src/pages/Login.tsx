@@ -9,8 +9,8 @@ const Login = () => {
         padding={5}
         maxW="450px"
         mx="auto"
-        mt={'20'}
-        colorPalette={'teal'}
+        mt={'14'}
+        colorPalette={'orange'}
         size={'lg'}
         variant={'elevated'}
       >

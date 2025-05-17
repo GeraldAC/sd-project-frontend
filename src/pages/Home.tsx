@@ -71,19 +71,19 @@ const Home = () => {
 
         <HStack gap="2">
           <PromptButton
-            icon={<LuImagePlus color="brown" fontSize="lg" />}
+            icon={<LuImagePlus color="tomato" fontSize="lg" />}
             description="Precios"
           />
           <PromptButton
-            icon={<LuCode color="brown" fontSize="lg" />}
+            icon={<LuCode color="tomato" fontSize="lg" />}
             description="Ubicaciones"
           />
           <PromptButton
-            icon={<LuChartArea color="brown" fontSize="lg" />}
+            icon={<LuChartArea color="tomato" fontSize="lg" />}
             description="Tipos"
           />
           <PromptButton
-            icon={<LuPartyPopper color="brown" fontSize="lg" />}
+            icon={<LuPartyPopper color="tomato" fontSize="lg" />}
             description="Productores  "
           />
         </HStack>
@@ -106,9 +106,9 @@ interface PromptButtonProps {
 function PromptButton(props: PromptButtonProps) {
   const { icon, description } = props
   return (
-    <Button colorPalette={'brown'} variant="ghost" borderRadius="full">
+    <Button colorPalette={'orange'} variant="ghost" borderRadius="full">
       {icon}
-      <Span color="fg.subtle">{description}</Span>
+      <Span color="fg.muted">{description}</Span>
     </Button>
   )
 }

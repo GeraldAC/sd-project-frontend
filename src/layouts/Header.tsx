@@ -23,7 +23,7 @@ const Header = () => {
   }
 
   return (
-    <Box bg="white" px={12} py={3}>
+    <Box bg={'brown.700'} px={12} py={3}>
       <Flex align="center" gap={'2'}>
         <LinkBox>
           <LinkOverlay href="/">
@@ -38,18 +38,28 @@ const Header = () => {
             {location.pathname == '/' && (
               <ButtonGroup gap={'2'}>
                 <Button
-                  colorPalette={'gray'}
-                  variant={'ghost'}
+                  variant={'plain'}
+                  color={'white'}
                   rounded={'full'}
                   size={'lg'}
+                  _hover={{
+                    layerStyle: 'fill.subtle',
+                    bgColor: 'orange.100',
+                    color: 'orange.700',
+                  }}
                 >
                   Sobre Nosotros
                 </Button>
                 <Button
-                  colorPalette={'gray'}
-                  variant={'ghost'}
+                  variant={'plain'}
+                  color={'white'}
                   rounded={'full'}
                   size={'lg'}
+                  _hover={{
+                    layerStyle: 'fill.subtle',
+                    bgColor: 'orange.100',
+                    color: 'orange.700',
+                  }}
                   onClick={handleLogin}
                 >
                   Iniciar
@@ -59,20 +69,20 @@ const Header = () => {
             {location.pathname !== '/login' && (
               <Button
                 asChild
-                colorPalette={'white'}
-                variant={'outline'}
                 rounded={'full'}
                 size={'lg'}
-                borderWidth={'medium'}
-                borderColor={'black'}
+                colorPalette={'green'}
+                variant={'surface'}
               >
-                <Link href="/login">Iniciar Sesión</Link>
+                <Link href="/login" color={'green.900'}>
+                  Iniciar Sesión
+                </Link>
               </Button>
             )}
             {location.pathname !== '/register' && (
               <Button
                 asChild
-                colorPalette={'black'}
+                colorPalette={'green'}
                 variant={'solid'}
                 rounded={'full'}
                 size={'lg'}

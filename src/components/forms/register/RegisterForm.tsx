@@ -33,7 +33,7 @@ const RegisterForm = () => {
 
       <Steps.Root
         size={'lg'}
-        colorPalette={'teal'}
+        colorPalette={'orange'}
         step={step}
         onStepChange={(e) => setStep(e.step)}
         count={steps.length}
