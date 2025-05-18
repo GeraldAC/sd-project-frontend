@@ -2,8 +2,6 @@ import {
   Image,
   Text,
   HStack,
-  LinkBox,
-  LinkOverlay,
   RatingGroup,
   Card,
   Box,

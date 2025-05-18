@@ -3,6 +3,7 @@ import Login from '@/pages/Login'
 import Register from '@/pages/Register'
 import Home from '@/pages/Home'
 import Dashboard from '@/pages/Dashboard'
+import About from '@/pages/About'
 
 export const AppRoutes = () => {
   return (
@@ -10,6 +11,7 @@ export const AppRoutes = () => {
       <Route path="/" element={<Home />} />
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
+      <Route path="/about" element={<About />} />
       <Route path="/dashboard" element={<Dashboard />} />
       <Route path="*" element={<Navigate to={'/'} replace />}></Route>
     </Routes>

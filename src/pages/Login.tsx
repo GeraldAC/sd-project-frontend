@@ -13,6 +13,7 @@ const Login = () => {
         colorPalette={'orange'}
         size={'lg'}
         variant={'elevated'}
+        boxShadow={'xl'}
       >
         <Card.Header>
           <Card.Title fontSize={'xx-large'}>Inicio de Sesión</Card.Title>

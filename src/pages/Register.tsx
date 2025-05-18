@@ -5,7 +5,13 @@ import { Card } from '@chakra-ui/react'
 const Register = () => {
   return (
     <Layout>
-      <Card.Root variant={'elevated'} maxW="600px" mx="auto" p={'4'}>
+      <Card.Root
+        variant={'elevated'}
+        maxW="600px"
+        mx="auto"
+        p={'4'}
+        boxShadow={'xl'}
+      >
         <Card.Header>
           <Card.Title textAlign="center" fontSize={'2xl'}>
             Formulario de Registro

@@ -45,6 +45,7 @@ const Header = () => {
             {location.pathname == '/' && (
               <ButtonGroup gap={'2'}>
                 <Button
+                  asChild
                   variant={'plain'}
                   color={'white'}
                   rounded={'full'}
@@ -55,7 +56,7 @@ const Header = () => {
                     color: 'orange.700',
                   }}
                 >
-                  Sobre Nosotros
+                  <Link href="/about">Sobre Nosotros</Link>
                 </Button>
                 <Button
                   variant={'plain'}
