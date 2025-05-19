@@ -8,7 +8,7 @@ interface SidebarContextType {
 const SidebarContext = createContext({} as SidebarContextType)
 
 export const SidebarProvider = (props: { children: React.ReactNode }) => {
-  const [sideBarVisible, setSideBarVisible] = useState(false)
+  const [sideBarVisible, setSideBarVisible] = useState(true)
 
   const toggleSidebar = () => {
     setSideBarVisible(!sideBarVisible)

@@ -14,6 +14,7 @@ import {
   Icon,
   Circle,
   Link,
+  Card,
 } from '@chakra-ui/react'
 import { LuGithub } from 'react-icons/lu'
 
@@ -47,53 +48,77 @@ export default function About() {
     <Layout>
       <Box py={5} fontFamily={'revert'}>
         <Container maxW="6xl">
-          {/* Hero Section */}
-          <VStack gap={6} textAlign="center" mb={16}>
-            <Heading size="2xl" fontWeight="bold" color={'green.600'}>
-              Cusco Orgánico
-            </Heading>
-            <Text fontSize="lg" maxW="4xl">
-              En Cusco Orgánico creemos en el poder de los pequeños
-              emprendimientos agronómicos para transformar comunidades.
-              Conectamos a productores locales con clientes mediante una
-              plataforma accesible, gratuita y pensada para el desarrollo rural.
-            </Text>
-          </VStack>
-
-          {/* Objetivo Section */}
-          <VStack gap={6} textAlign="center" mb={16}>
-            <Heading size="2xl" fontWeight="bold" color={'green.600'}>
-              Nuestro Objetivo
-            </Heading>
-            <Text fontSize="lg" maxW="4xl">
-              Impulsar la economía agronómica local conectando directamente a
-              los emprendedores rurales con potenciales clientes mediante una
-              plataforma accesible, intuitiva y gratuita.
-              <br />
-              <br />
-              Buscamos digitalizar a pequeños productores, facilitar la difusión
-              de productos orgánicos, fomentar la confianza del consumidor y
-              construir una red sostenible de comercio justo.
-            </Text>
-          </VStack>
-
-          {/* Equipo Section */}
-          <Box>
-            <Heading
-              color={'green.600'}
-              size="2xl"
-              fontWeight="bold"
-              textAlign="center"
-              mb={10}
+          <VStack gap={'7'}>
+            {/* Hero Section */}
+            <Card.Root
+              textAlign={'center'}
+              boxShadow={'xl'}
+              rounded={'full'}
+              borderInlineWidth={'8px'}
+              borderBlockWidth={'0px'}
+              borderColor={'green.600'}
             >
-              Nuestro Equipo
-            </Heading>
-            <SimpleGrid columns={{ base: 1, md: 3 }} gap={10}>
-              {members.map((member, index) => (
-                <Member key={index} member={member} />
-              ))}
-            </SimpleGrid>
-          </Box>
+              <Card.Header>
+                <Heading size="2xl" fontWeight="bold" color={'green.600'}>
+                  Cusco Orgánico
+                </Heading>
+              </Card.Header>
+              <Card.Body>
+                <Text fontSize="lg" maxW="4xl">
+                  En Cusco Orgánico creemos en el poder de los pequeños
+                  emprendimientos agronómicos para transformar comunidades.
+                  Conectamos a productores locales con clientes mediante una
+                  plataforma accesible, gratuita y pensada para el desarrollo
+                  rural.
+                </Text>
+              </Card.Body>
+            </Card.Root>
+
+            {/* Objetivo Section */}
+            <Card.Root
+              textAlign={'center'}
+              boxShadow={'xl'}
+              rounded={'full'}
+              borderInlineWidth={'8px'}
+              borderBlockWidth={'0px'}
+              borderColor={'green.600'}
+            >
+              <Card.Header>
+                <Heading size="2xl" fontWeight="bold" color={'green.600'}>
+                  Nuestro Objetivo
+                </Heading>
+              </Card.Header>
+              <Card.Body>
+                <Text fontSize="lg" maxW="4xl">
+                  Impulsar la economía agronómica local conectando directamente
+                  a los emprendedores rurales con potenciales clientes mediante
+                  una plataforma accesible, intuitiva y gratuita.
+                  <br />
+                  Buscamos digitalizar a pequeños productores, facilitar la
+                  difusión de productos orgánicos, fomentar la confianza del
+                  consumidor y construir una red sostenible de comercio justo.
+                </Text>
+              </Card.Body>
+            </Card.Root>
+
+            {/* Equipo Section */}
+            <Box mt={'4'}>
+              <Heading
+                color={'green.600'}
+                size="2xl"
+                fontWeight="bold"
+                textAlign="center"
+                mb={5}
+              >
+                Nuestro Equipo
+              </Heading>
+              <SimpleGrid columns={{ base: 1, md: 3 }} gap={10}>
+                {members.map((member, index) => (
+                  <Member key={index} member={member} />
+                ))}
+              </SimpleGrid>
+            </Box>
+          </VStack>
         </Container>
       </Box>
     </Layout>

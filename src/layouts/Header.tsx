@@ -6,7 +6,6 @@ import {
   Button,
   Link,
   Image,
-  ButtonGroup,
   LinkOverlay,
   LinkBox,
 } from '@chakra-ui/react'
@@ -37,42 +36,56 @@ const Header = () => {
             <Image src={logo} alt="Logo" rounded={'full'} height="50px" />
           </LinkOverlay>
         </LinkBox>
+        <Button
+          asChild
+          variant={'plain'}
+          color={'white'}
+          rounded={'full'}
+          size={'lg'}
+          _hover={{
+            layerStyle: 'fill.subtle',
+            bgColor: 'orange.100',
+            color: 'orange.700',
+          }}
+        >
+          <Link href="/about">Sobre Nosotros</Link>
+        </Button>
         <Spacer />
         {user ? (
-          <UserMenu />
+          <>
+            <Button
+              asChild
+              variant={'plain'}
+              color={'white'}
+              rounded={'full'}
+              size={'lg'}
+              _hover={{
+                layerStyle: 'fill.subtle',
+                bgColor: 'orange.100',
+                color: 'orange.700',
+              }}
+            >
+              <Link href="/dashboard">Panel de Control</Link>
+            </Button>
+            <UserMenu />
+          </>
         ) : (
           <>
             {location.pathname == '/' && (
-              <ButtonGroup gap={'2'}>
-                <Button
-                  asChild
-                  variant={'plain'}
-                  color={'white'}
-                  rounded={'full'}
-                  size={'lg'}
-                  _hover={{
-                    layerStyle: 'fill.subtle',
-                    bgColor: 'orange.100',
-                    color: 'orange.700',
-                  }}
-                >
-                  <Link href="/about">Sobre Nosotros</Link>
-                </Button>
-                <Button
-                  variant={'plain'}
-                  color={'white'}
-                  rounded={'full'}
-                  size={'lg'}
-                  _hover={{
-                    layerStyle: 'fill.subtle',
-                    bgColor: 'orange.100',
-                    color: 'orange.700',
-                  }}
-                  onClick={handleLogin}
-                >
-                  Iniciar
-                </Button>
-              </ButtonGroup>
+              <Button
+                variant={'plain'}
+                color={'white'}
+                rounded={'full'}
+                size={'lg'}
+                _hover={{
+                  layerStyle: 'fill.subtle',
+                  bgColor: 'orange.100',
+                  color: 'orange.700',
+                }}
+                onClick={handleLogin}
+              >
+                Iniciar
+              </Button>
             )}
             {location.pathname !== '/login' && (
               <Button

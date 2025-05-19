@@ -1,3 +1,5 @@
+'use client'
+
 import { useAuth } from '@/hooks/AuthContext'
 import { Box, Flex, Text, Button, Stack, Spacer, Link } from '@chakra-ui/react'
 import { useNavigate } from 'react-router-dom'

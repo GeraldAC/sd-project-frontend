@@ -1,3 +1,5 @@
+'use client'
+
 import { Badge, Box, Button, Card, HStack, Image } from '@chakra-ui/react'
 import cafe from '../../assets/cafe-peru.jpg'
 

@@ -10,7 +10,7 @@ const Footer = () => {
       </Text>
       <Text fontSize="sm">
         Hecho con
-        <Icon boxSize={4} color={'red'} mx="2">
+        <Icon color={'red'} mx="2" size={'md'}>
           <LuZap />
         </Icon>
         por EmprendeBro

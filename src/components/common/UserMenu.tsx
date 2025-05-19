@@ -1,6 +1,23 @@
+'use client'
+
 import { useAuth } from '@/hooks/AuthContext'
-import { Avatar, Box, Button, Menu, Text, VStack } from '@chakra-ui/react'
+import {
+  Avatar,
+  Box,
+  Button,
+  defineStyle,
+  Menu,
+  Text,
+  VStack,
+} from '@chakra-ui/react'
 import { useNavigate } from 'react-router-dom'
+
+const ringCss = defineStyle({
+  outlineWidth: '2px',
+  outlineColor: 'colorPalette.500',
+  outlineOffset: '2px',
+  outlineStyle: 'solid',
+})
 
 const UserMenu = () => {
   const { user, logout } = useAuth()
@@ -14,8 +31,14 @@ const UserMenu = () => {
   return (
     <Menu.Root>
       <Menu.Trigger>
-        <Avatar.Root size={'xl'} variant={'subtle'} colorPalette={'brand'}>
-          <Avatar.Fallback name={user?.name} />
+        <Avatar.Root
+          size={'xl'}
+          variant={'solid'}
+          colorPalette={'green'}
+          css={ringCss}
+          _hover={{ transform: 'scale(0.9)', cursor: 'pointer' }}
+        >
+          <Avatar.Fallback name={user?.name || 'John Doe'} />
         </Avatar.Root>
       </Menu.Trigger>
       <Menu.Positioner>
@@ -28,7 +51,7 @@ const UserMenu = () => {
               py="2"
             >
               <Text fontSize={'md'} mx={'4'}>
-                {user?.name}
+                {user?.name || 'John Doe'}
               </Text>
             </Box>
             <Box
@@ -38,7 +61,7 @@ const UserMenu = () => {
               py="2"
             >
               <Text fontSize={'md'} mx={'4'}>
-                Rol: {user?.role}
+                Rol: {user?.role || 'Cliente'}
               </Text>
             </Box>
             <Button

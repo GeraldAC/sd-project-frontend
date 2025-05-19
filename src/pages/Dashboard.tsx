@@ -1,21 +1,30 @@
-import { Box, Flex, Stack } from '@chakra-ui/react'
+import { Box, Flex, Spacer } from '@chakra-ui/react'
 import { Sidebar } from '@/components/dashboard/sidebar'
 import { TopSection } from '@/components/dashboard/top-section'
 import { SidebarProvider } from '@/components/dashboard/sidebar-context'
-import { MiddleSection } from '@/components/dashboard/middle-section'
 import { BottomSection } from '@/components/dashboard/botton-section'
+import { Outlet } from 'react-router-dom'
 
 const Dashboard = () => {
   return (
     <SidebarProvider>
-      <Flex minH="100dvh">
+      <Flex h="100dvh" overflow="hidden">
         <Sidebar />
-        <Box flex="1">
-          <Stack h="full">
-            <TopSection />
-            <MiddleSection />
-            <BottomSection />
-          </Stack>
+
+        <Box flex="1" display="flex" flexDirection="column">
+          <TopSection />
+
+          {/* Scrollable area */}
+          <Box flex="1" overflowY="auto">
+            <Flex direction="column" minH="100%">
+              <Box px={5} py={4}>
+                <Outlet />
+              </Box>
+              <Spacer />{' '}
+              {/* Este empuja el BottomSection hacia abajo si hay poco contenido */}
+              <BottomSection />
+            </Flex>
+          </Box>
         </Box>
       </Flex>
     </SidebarProvider>
